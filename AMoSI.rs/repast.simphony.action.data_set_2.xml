@@ -1,0 +1,58 @@
+<repast.simphony.data2.engine.DataSetDescriptor simphonyVersion="2.5.0">
+  <name>Gov</name>
+  <type>AGGREGATE</type>
+  <inclTick>true</inclTick>
+  <inclBatchRun>false</inclBatchRun>
+  <inclRandomSeed>false</inclRandomSeed>
+  <scheduleParams>
+    <start>1200.0</start>
+    <interval>1.0</interval>
+    <priority>-Infinity</priority>
+    <pType>LAST</pType>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+    <hashCode>-1621410328</hashCode>
+  </scheduleParams>
+  <atEnd>false</atEnd>
+  <methodDataSources class="linked-hash-map">
+    <entry>
+      <string>Funds</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>Funds</id>
+        <className>economySim.Government</className>
+        <methodName>getFunds</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>IVA</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>IVA</id>
+        <className>economySim.Government</className>
+        <methodName>getIVA</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>IRS</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>IRS</id>
+        <className>economySim.Government</className>
+        <methodName>getIRS</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>IRC</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>IRC</id>
+        <className>economySim.Government</className>
+        <methodName>getIRC</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+  </methodDataSources>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map"/>
+</repast.simphony.data2.engine.DataSetDescriptor>

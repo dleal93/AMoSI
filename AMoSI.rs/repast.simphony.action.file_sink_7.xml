@@ -1,0 +1,29 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.5.0">
+  <name>OverallStatistics</name>
+  <dataSet>SM_Aggregate</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>tick</string>
+    <string>FirmFunds</string>
+    <string>GovFunds</string>
+    <string>HHFunds</string>
+    <string>HHConsumption</string>
+    <string>Inflation</string>
+    <string>ProductionOutput</string>
+    <string>Unemployment</string>
+    <string>JobVacancies</string>
+    <string>GDP</string>
+    <string>TotalStock</string>
+    <string>TotalSoldGoods</string>
+    <string>AvgPracticedPrice</string>
+    <string>AvgGoodsPrice</string>
+    <string>AvgWage</string>
+    <string>GiniConsumption</string>
+    <string>GiniFunds</string>
+    <string>GiniIncome</string>
+    <string>GiniWage</string>
+  </sourceIds>
+  <fileName>.\logs\OverallStatistics.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
