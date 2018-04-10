@@ -19,7 +19,7 @@
       <string>HBalance</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>HBalance</id>
-        <className>economySim.Household</className>
+        <className>agents.Household</className>
         <methodName>getBalance</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -28,7 +28,7 @@
       <string>FBalance</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>FBalance</id>
-        <className>economySim.Firm</className>
+        <className>agents.Firm</className>
         <methodName>getBalance</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -37,7 +37,7 @@
       <string>GovBalance</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GovBalance</id>
-        <className>economySim.Government</className>
+        <className>agents.Government</className>
         <methodName>getFunds</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>

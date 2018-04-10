@@ -19,7 +19,7 @@
       <string>Funds</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>Funds</id>
-        <className>economySim.Government</className>
+        <className>agents.Government</className>
         <methodName>getFunds</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -28,7 +28,7 @@
       <string>IVA</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>IVA</id>
-        <className>economySim.Government</className>
+        <className>agents.Government</className>
         <methodName>getIVA</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -37,7 +37,7 @@
       <string>IRS</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>IRS</id>
-        <className>economySim.Government</className>
+        <className>agents.Government</className>
         <methodName>getIRS</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -46,7 +46,7 @@
       <string>IRC</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>IRC</id>
-        <className>economySim.Government</className>
+        <className>agents.Government</className>
         <methodName>getIRC</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>

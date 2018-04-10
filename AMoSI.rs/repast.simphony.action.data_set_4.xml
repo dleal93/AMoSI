@@ -19,7 +19,7 @@
       <string>FirmFunds</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>FirmFunds</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getFirmFunds</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -28,7 +28,7 @@
       <string>GovFunds</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GovFunds</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getGovFunds</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -37,7 +37,7 @@
       <string>HHFunds</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>HHFunds</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getHouseholdFunds</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -46,7 +46,7 @@
       <string>HHConsumption</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>HHConsumption</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getHouseholdConsumption</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -55,7 +55,7 @@
       <string>Inflation</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>Inflation</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getInflation</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -64,7 +64,7 @@
       <string>ProductionOutput</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>ProductionOutput</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getProductionOutput</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -73,7 +73,7 @@
       <string>Unemployment</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>Unemployment</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getUnemployementRate</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -82,7 +82,7 @@
       <string>JobVacancies</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>JobVacancies</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getUnfilledVacancies</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -91,7 +91,7 @@
       <string>GDP</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GDP</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getGDP</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -100,7 +100,7 @@
       <string>TotalStock</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>TotalStock</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getTotalStock</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -109,7 +109,7 @@
       <string>TotalSoldGoods</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>TotalSoldGoods</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getTotalSoldGoods</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -118,7 +118,7 @@
       <string>AvgPracticedPrice</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>AvgPracticedPrice</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getAvgPracticedPrice</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -127,7 +127,7 @@
       <string>AvgGoodsPrice</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>AvgGoodsPrice</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getAvgGoodsPrice</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -136,7 +136,7 @@
       <string>AvgWage</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>AvgWage</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getAverageWage</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -145,7 +145,7 @@
       <string>GiniConsumption</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GiniConsumption</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getGiniIndexConsumption</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -154,7 +154,7 @@
       <string>GiniFunds</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GiniFunds</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getGiniIndexFunds</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -163,7 +163,7 @@
       <string>GiniIncome</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GiniIncome</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getGiniIndexIncome</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
@@ -172,7 +172,7 @@
       <string>GiniWage</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>GiniWage</id>
-        <className>economyEnvironment.StatisticsManager</className>
+        <className>environment.StatisticsManager</className>
         <methodName>getGiniIndexWage</methodName>
         <aggType>SUM</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
