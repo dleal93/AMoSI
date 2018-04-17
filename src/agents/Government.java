@@ -25,14 +25,11 @@ public class Government implements Agent {
 
 	private boolean redistributed = false;
 
-	private float firmsTax;
-	private float incomeTax;
-
 	private float IRC;
 	private float IVA;
 	private float IRS;
 
-	private float costs;
+	private int redistTurn;
 
 	/**
 	 * @param contextHouseholds
@@ -41,11 +38,8 @@ public class Government implements Agent {
 	 */
 	public Government() {
 		account = Bank.registerClient(this, 0);
-		firmsTax = Properties.IRC_TAX;
-		incomeTax = Properties.IRS_TAX;
-		IVA = 0;
-		IRS = 0;
-		IRC = 0;
+		IVA = IRS = IRC = 0;
+		redistTurn = 0;
 	}
 
 	public void setFiels(List<Household> contextHouseholds) {
@@ -58,26 +52,37 @@ public class Government implements Agent {
 		for (Household household : households) {
 			if (!household.isEmployed()) {
 				if (household.getUnemployedTime() <= Properties.UNEMPLOYED_TIME) {
-					Bank.pay(this, household, Math.max(
-							household.getLastWage()
-									* Properties.UNEMPLOYED_BENEFIT_FACTOR,
-							Properties.MIN_BENEFIT * Properties.MIN_WAGE
-									* (1 - Properties.IRS_TAX)));
+					Bank.pay(this, household, Math.max(household.getLastWage() * Properties.UNEMPLOYED_BENEFIT_FACTOR,
+							Properties.MIN_BENEFIT * Properties.MIN_WAGE * (1 - Properties.IRS_TAX)));
 				} else if (household.getUnemployedTime() > Properties.UNEMPLOYED_TIME)
-					Bank.pay(this, household, Properties.MIN_BENEFIT
-							* Properties.MIN_WAGE * (1 - Properties.IRS_TAX));
+					Bank.pay(this, household, Properties.MIN_BENEFIT * Properties.MIN_WAGE * (1 - Properties.IRS_TAX));
 
 			} else {
 
-				Bank.pay(
-						this,
-						household,
-						Properties.EARNED_TAX_CREDIT
-								* Properties.calculateEarnedTaxCredit(household
-										.getWage()));
+				Bank.pay(this, household,
+						Properties.EARNED_TAX_CREDIT * Properties.calculateEarnedTaxCredit(household.getWage()));
 
 			}
 		}
+
+		if (redistTurn == Properties.GROWTH_PERIOD) {
+			if (account.getBalance() > 0) {
+				Properties.IRC_TAX -= Properties.IRC_TAX * Properties.TAX_VARIANCE;
+				Properties.IRS_TAX -= Properties.IRS_TAX * Properties.TAX_VARIANCE;
+				Properties.IVA_TAX -= Properties.IVA_TAX * Properties.TAX_VARIANCE;
+				//System.out.println("TAX DECREASE");
+			} else {
+				Properties.IRC_TAX += Properties.IRC_TAX * Properties.TAX_VARIANCE;
+				Properties.IRS_TAX += Properties.IRS_TAX * Properties.TAX_VARIANCE;
+				Properties.IVA_TAX += Properties.IVA_TAX * Properties.TAX_VARIANCE;
+				//System.out.println("TAX INCREASE");
+			}
+			/*System.out.println("IRC: " + Properties.IRC_TAX + "\nIRS: " + Properties.IRS_TAX + "\nIVA: "
+					+ Properties.IVA_TAX + "\n");*/
+			redistTurn = -1;
+		}
+
+		redistTurn++;
 
 		IRS = 0;
 		IRC = 0;
@@ -87,12 +92,14 @@ public class Government implements Agent {
 	}
 
 	public float payIncomeTaxes(BankAccount firmAccount, float salary) {
+		float incomeTax = Properties.IRS_TAX;
 		IRS += salary * incomeTax;
 		Bank.transfer(firmAccount, this, salary * incomeTax);
 		return salary - (salary * incomeTax);
 	}
 
 	public void payProfitTaxes(BankAccount firmAccount, float profit) {
+		float firmsTax = Properties.IRC_TAX;
 		IRC += profit * firmsTax;
 		Bank.transfer(firmAccount, this, profit * firmsTax);
 	}
@@ -116,10 +123,6 @@ public class Government implements Agent {
 
 	public float getIVA() {
 		return IVA;
-	}
-
-	public float getCosts() {
-		return costs;
 	}
 
 }

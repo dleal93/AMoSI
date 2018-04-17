@@ -85,9 +85,11 @@ public final class Properties {
 	// GOVERNMENT
 
 	public final static float MIN_WAGE = 1;
-	public final static float IRC_TAX = (float) params.getValue("IRC");
-	public final static float IRS_TAX = (float) params.getValue("IRS");
-	public final static float IVA_TAX = (float) params.getValue("IVA");
+	public final static float TAX_VARIANCE = 0.05f;
+	public final static int GROWTH_PERIOD = 5;
+	public static float IRC_TAX = (float) params.getValue("IRC");
+	public static float IRS_TAX = (float) params.getValue("IRS");
+	public static float IVA_TAX = (float) params.getValue("IVA");
 	public final static float MIN_BENEFIT = (float) params.getValue("minbenefit");
 	public final static float EARNED_TAX_CREDIT = (float) params.getValue("eitcbenefit");
 	public final static float UNEMPLOYED_BENEFIT_FACTOR = (float) params.getValue("unempbenefit");
